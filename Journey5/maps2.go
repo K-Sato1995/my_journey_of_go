@@ -28,7 +28,7 @@ func main(){
   //Deleting a key from a map
   delete(map_ex, 1)
   fmt.Println(map_ex) //=> map[2:Ruby]
-  
+
   //modify the data of a map
   map_ex[1] = "Python"
   map_ex[2] = "Java"
