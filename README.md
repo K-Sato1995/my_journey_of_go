@@ -26,3 +26,17 @@
 
 ## References
 - [Package fmt](https://golang.org/pkg/fmt/)
+
+# Escape Sequence
+
+`\\`:	\ character
+`\'`:	' character
+`\"`:	" character
+`\?`:	? character
+`\a`:	Alert or bell
+`\b`:	Backspace
+`\f`:	Form feed
+`\n`:	Newline
+`\r`:	Carriage return
+`\t`:	Horizontal tab
+`\v`: Vertical tab
