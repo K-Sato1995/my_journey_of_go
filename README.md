@@ -24,9 +24,6 @@
 ### Pointer
 `%p`: base 16 notation, with leading 0x
 
-## References
-- [Package fmt](https://golang.org/pkg/fmt/)
-
 # Escape Sequence
 
 `\\`:	\ character
@@ -40,3 +37,21 @@
 `\r`:	Carriage return
 `\t`:	Horizontal tab
 `\v`: Vertical tab
+
+# Format your code
+To format your code, you can use the gofmt tool directly:
+
+```
+gofmt -w yourcode.go
+```
+
+Or you can use the "go fmt" command:
+
+```
+go fmt path/to/your/package
+```
+
+# References
+- [Package fmt](https://golang.org/pkg/fmt/)
+- [go fmt your code](https://blog.golang.org/go-fmt-your-code)
+- [Escape Sequence](https://www.tutorialspoint.com/go/go_constants.htm)
