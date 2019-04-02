@@ -4,7 +4,7 @@ I listed things that would come in handy when you are using string.
 # (1) Multiline strings
 Creating a multiline string in Go is actually incredibly easy. Simply use the backtick (\`) character when declaring or assigning your string value.
 
-```
+```go
 str := `This is a
 multiline
 string.`
@@ -13,7 +13,7 @@ string.`
 # (2) Efficient concatenation (Array => String)
 You can concatenate an array of strings using `strings.Join`.
 
-```
+```go
 package main
 
 import (
@@ -31,7 +31,7 @@ func main() {
 # (3) Convert ints (or any data type) into strings
 You should look to use packages like strconv or functions like fmt.Sprintf. For example, here is an example using strconv.Itoa to convert an integer into a string.
 
-```
+```go
 package main
 
 import (
