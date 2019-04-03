@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+  "log"
 )
 
 func main() {
@@ -16,6 +17,10 @@ func main() {
 	array := []string{"A", "B"}
 	fmt.Println(strconv.Itoa(i))     //=> 123
 	fmt.Println(returnString(array)) //=> The array becomes a string. [A B]
+
+  // log
+  log.Println("Log test")
+  log.Printf("Log %v", array)
 }
 
 func returnString(arr []string) string {
