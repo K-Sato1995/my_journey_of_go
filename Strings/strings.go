@@ -5,6 +5,7 @@ import (
 	"strconv"
 	"strings"
   "log"
+  "regexp"
 )
 
 func main() {
@@ -21,6 +22,13 @@ func main() {
   // log
   log.Println("Log test")
   log.Printf("Log %v", array)
+
+
+  // regexp
+  const sample = `Test - test`
+  var re = regexp.MustCompile(`\b|\W`)
+  s := re.ReplaceAllString(sample, ``)
+  fmt.Println(s) //=> Test test
 }
 
 func returnString(arr []string) string {
