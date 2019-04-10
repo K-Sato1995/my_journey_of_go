@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"regexp"
 	"strconv"
 	"strings"
-  "log"
-  "regexp"
 )
 
 func main() {
@@ -19,16 +19,18 @@ func main() {
 	fmt.Println(strconv.Itoa(i))     //=> 123
 	fmt.Println(returnString(array)) //=> The array becomes a string. [A B]
 
-  // log
-  log.Println("Log test")
-  log.Printf("Log %v", array)
+	// (4) string => slice
+	fmt.Printf("%#v\n", strings.Split("abc", "")) //=> []string{"t", "e", "s", "t"}
 
+	// log
+	log.Println("Log test")
+	log.Printf("Log %v", array)
 
-  // regexp
-  const sample = `Test - test`
-  var re = regexp.MustCompile(`\b|\W`)
-  s := re.ReplaceAllString(sample, ``)
-  fmt.Println(s) //=> Test test
+	// regexp
+	const sample = `Test - test`
+	var re = regexp.MustCompile(`\b|\W`)
+	s := re.ReplaceAllString(sample, ``)
+	fmt.Println(s) //=> Test test
 }
 
 func returnString(arr []string) string {

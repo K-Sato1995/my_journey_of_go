@@ -53,5 +53,13 @@ func returnString(arr []string) string{
 }
 ```
 
+# (4) String into a slice
+
+Use strings.Split on it.
+
+```go
+fmt.Printf("%#v\n", strings.Split("abc", "")) //=> []string{"t", "e", "s", "t"}
+```
+
 # References
 [6 Tips for Using Strings in Go](https://www.calhoun.io/6-tips-for-using-strings-in-go/)
