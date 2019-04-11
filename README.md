@@ -83,3 +83,4 @@ go fmt path/to/your/package
 - [Go Data Types](https://www.tutorialspoint.com/go/go_data_types.htm)
 - [go fmt your code](https://blog.golang.org/go-fmt-your-code)
 - [Escape Sequence](https://www.tutorialspoint.com/go/go_constants.htm)
+- [Awesome Go](https://github.com/avelino/awesome-go)
