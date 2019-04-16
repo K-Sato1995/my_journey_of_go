@@ -15,7 +15,7 @@ ch := make(chan TYPE)
 
 ```go
 ch <- data // write to channel ch
-variable := <- cd // read from channel ch
+variable := <- c // read from channel ch
 ```
  In the first line, the arrow points towards `ch` and this means we are writing data to channel `ch`.  
  In the second line, the arrow points outwards from `ch` and this means we are reading from `ch` and storing data to `variable`.
