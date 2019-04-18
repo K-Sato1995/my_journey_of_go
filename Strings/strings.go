@@ -31,6 +31,10 @@ func main() {
 	var re = regexp.MustCompile(`\b|\W`)
 	s := re.ReplaceAllString(sample, ``)
 	fmt.Println(s) //=> Test test
+
+	// ToLower/ToUpper
+	fmt.Println(strings.ToLower("STR")) //=> str
+	fmt.Println(strings.ToUpper("str")) ///=> STR
 }
 
 func returnString(arr []string) string {
