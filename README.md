@@ -105,8 +105,6 @@ But if you want to export a function, you have to write it starting with a capit
 TestFunction () {}
 ```
 
-###
-
 # References
 
 - [Package fmt](https://golang.org/pkg/fmt/)
