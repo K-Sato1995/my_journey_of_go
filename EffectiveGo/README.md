@@ -44,6 +44,33 @@ If the package is simple, the package comment can be brief.
 
 # Names
 
+Using `MixedCaps` is the convention in Go.
+
+```go
+// var example
+var testVariable string
+
+// function example
+testFunction (){}
+```
+
+But if you want to export a function, you have to write it starting with a capital letter like the name below.
+
+```go
+TestFunction () {}
+```
+
+# Control structures
+
+Since if and switch accept an initialization statement in Go, it's common to see one used to set up a local variable.
+
+```go
+if err := file.Chmod(0664); err != nil {
+    log.Print(err)
+    return err
+}
+```
+
 # Resources
 
 - [Effective Go](https://golang.org/doc/effective_go.html)
