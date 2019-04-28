@@ -1,8 +1,9 @@
 package main
 
 import (
-	"./export/first"
-	"./export/second"
+	"./first"
+	"./second"
+	"./zoo"
 	"fmt"
 )
 
@@ -16,4 +17,6 @@ func main() {
 	first.Exported() //=> This is Exported fron first.go
 	second.Test()    //=> This is gonna be exported
 	second.Bar()     //=> This is also exported
+	fmt.Printf("%s\n", zoo.Lion()) //=> GAH
+	fmt.Printf("%s\n", zoo.Dog()) //=> HAHA
 }
