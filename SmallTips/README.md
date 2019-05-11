@@ -54,7 +54,7 @@ the value of condition expression in a `if statement` has to be a bool type.
 ```go
 if(true) {} // ok
 
-if(1){} // 条件式が論理値(bool型)ではないのでコンパイルエラーを引き起こす。
+if(1){} // Causing a compiling error.
 ```
 
 # iota
@@ -86,7 +86,7 @@ You can swap values in a slice like the code below.
 ```go
 func main() {
   var list = []int { 1, 2, 3 ,4,5}
-  list[0], list[1] = list[1], list[0] // 逆の順に並べる。
+  list[0], list[1] = list[1], list[0] // Reverse the order on the right side.
   fmt.Println(list) //=> [2 1 3 4 5]
 }
 ```
