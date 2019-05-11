@@ -20,7 +20,7 @@ func insertionSort(list []int) []int {
 			if list[j-1] > list[j] {
 				list[j-1], list[j] = list[j], list[j-1] // swap the values if unsorted value is smaller that the sorted value.
 			}
-			j--
+			j-- // Repeat it until the last sorted value.
 		}
 	}
 

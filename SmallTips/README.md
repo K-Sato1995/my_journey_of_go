@@ -1,16 +1,16 @@
 # Go Small Tips
 
-# 参照されないパッケージ
+# Unreferenced package
 
-以下のように import する事で、コンパイルエラーを引き起こさないで参照できる。
+You can keep unused packages below without causing any error by adding `_` to the packages.
 
 ```go
 import _"fmt"
 ```
 
-# まとめて変数や定数を定義
+# Define variables or constants all together
 
-以下のようにまとめて変数や定数を定義する事ができる。
+You can define multiple variables or constants all together like the code below.
 
 ```go
 var (
@@ -24,32 +24,32 @@ const (
 )
 ```
 
-# 無名関数
+# Unnamed function
 
 ```go
 f := func(x, y int) int { return x + y }
 f(3,5) //=> 8
 ```
 
-# import で別名を使用する。
+# Using an aliases for packages
 
-以下のようにする事で package 名を省略して書くことができる。
+You can make an aliases for packages like the code below.
 
 ```go
 import (
   f "fmt"
-  . "test" // package名そのものを省略できる。
+  . "test" // You can omit the package name when you use anything from this package.
 )
 
 func main() {
   f.Println("hello")
-  T // testから
+  T // From test
 }
 ```
 
-# if には必ず論理値を返す条件を渡す。
+# You must pass a bool value to if's condition expression
 
-条件式は必ず論理値(bool 型)を返さなければならない。
+the value of condition expression in a `if statement` has to be a bool type.
 
 ```go
 if(true) {} // ok
@@ -59,7 +59,7 @@ if(1){} // 条件式が論理値(bool型)ではないのでコンパイルエラ
 
 # iota
 
-連続する数字の定数を定義する。
+Go's iota identifier is used in const declarations to simplify definitions of incrementing numbers.
 
 ```go
 const (
@@ -69,7 +69,7 @@ const (
   )
 ```
 
-1 から始めたい場合は以下のようにする。
+You can start the number from 1 like the below.
 
 ```go
 const (
@@ -77,4 +77,16 @@ const (
   B // B == 2
   C // C == 3
 )
+```
+
+# Swapping values in a slice
+
+You can swap values in a slice like the code below.
+
+```go
+func main() {
+  var list = []int { 1, 2, 3 ,4,5}
+  list[0], list[1] = list[1], list[0] // 逆の順に並べる。
+  fmt.Println(list) //=> [2 1 3 4 5]
+}
 ```
