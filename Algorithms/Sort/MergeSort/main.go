@@ -19,24 +19,26 @@ func mergeSort(list []int) []int {
 
 func merge(left, right []int) []int {
 	// size = the size of the whole array.
-	size, i, j := len(left)+len(right), 0, 0
+	size, leftIndex, rightIndex := len(left)+len(right), 0, 0
 	slice := make([]int, size, size)
 
 	// Make a new slice (also avoiding destroying the original, unsorted slice).
 	// We then keep track of the left and right slices to be merged and just pick the next smallest value from the left or right slice to add to our new slice.
 	for k := 0; k < size; k++ {
-		if i > len(left)-1 && j <= len(right)-1 {
-			slice[k] = right[j]
-			j++
-		} else if j > len(right)-1 && i <= len(left)-1 {
-			slice[k] = left[i]
-			i++
-		} else if left[i] < right[j] {
-			slice[k] = left[i]
-			i++
+		if leftIndex > len(left)-1 && rightIndex <= len(right)-1 {
+			// leftIndex > len(left)-1 means left array is empty.
+			// So put the smallest value from the right array and add 1 to the rightIndex.
+			slice[k] = right[rightIndex]
+			rightIndex++
+		} else if rightIndex > len(right)-1 && leftIndex <= len(left)-1 {
+			slice[k] = left[leftIndex]
+			leftIndex++
+		} else if left[leftIndex] < right[rightIndex] {
+			slice[k] = left[leftIndex]
+			leftIndex++ // To use the same value to compare from the right array.
 		} else {
-			slice[k] = right[j]
-			j++
+			slice[k] = right[rightIndex]
+			rightIndex++ // To use the same value to compare from the left array.
 		}
 	}
 	return slice
