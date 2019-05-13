@@ -90,3 +90,47 @@ func main() {
   fmt.Println(list) //=> [2 1 3 4 5]
 }
 ```
+
+# Use Pointer type for a receiver of a struct
+
+If you use a normal value type for a receiver like the code below, it does not work the way you expect.
+For further information about this, check [here](https://nathanleclaire.com/blog/2014/08/09/dont-get-bitten-by-pointer-vs-non-pointer-method-receivers-in-golang/).
+
+```go
+type Point struct {
+  X int
+  Y int
+}
+
+func (p Point) set(x, y int) {
+  p.X = x
+  p.Y = y
+}
+
+func main() {
+  p := Point{}
+  p.set(1,2)
+  fmt.Println(p) //=> {0 0}
+}
+```
+
+You should you a pointer type for a reciver.
+
+```go
+
+type Point struct {
+  X int
+  Y int
+}
+
+func (p *Point) set(x, y int) {
+  p.X = x
+  p.Y = y
+}
+
+func main(){
+  p := Point{}
+  p.set(1,2)
+  fmt.Println(p) //=> {1 2}
+}
+```
