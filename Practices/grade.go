@@ -6,13 +6,14 @@ func main() {
 	var scores = []int{50, 70, 80, 90}
 
 	for _, v := range scores {
-		fmt.Println(checkScore(v))
+		fmt.Printf("Your grade is %v\n", checkScore(v))
 	}
+
 	/*
-		F
-		C
-		B
-		A
+		Your grade is F
+		Your grade is C
+		Your grade is B
+		Your grade is A
 	*/
 }
 
