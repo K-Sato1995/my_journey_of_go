@@ -25,4 +25,17 @@ func main() {
 	)
 	fmt.Printf("%v, %v, %v\n", str3, num5, arr) //=> JS, 4, [Go Ruby]
 	fmt.Printf("%T, %T, %T\n", str3, num5, arr) //=> string, int, [2]string
+
+	// Type Conversion
+	var (
+		i int     = 1
+		f float64 = 1.0
+	)
+
+	fmt.Printf("i = %T, f = %T\n", i, f) //=> i = int, f = float64
+
+	a := float64(i)
+	b := int(f)
+
+	fmt.Printf("i = %T, f = %T\n", a, b) //=> i = float64, f = int
 }
