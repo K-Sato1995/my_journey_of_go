@@ -57,6 +57,16 @@ func main() {
 
 The expression `T(v)` converts the value v to the type `T`.
 
-```
+```go
+var (
+  i int     = 1
+  f float64 = 1.0
+)
 
+fmt.Printf("i = %T, f = %T\n", i, f) //=> i = int, f = float64
+
+a := float64(i)
+b := int(f)
+
+fmt.Printf("i = %T, f = %T\n", a, b) //=> i = float64, f = int
 ```
