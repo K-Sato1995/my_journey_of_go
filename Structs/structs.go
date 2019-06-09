@@ -37,8 +37,35 @@ func main() {
 
 	fmt.Printf("%p\n", p_pointer) //=> 0xc42009a020
 	intro(john.name, john.age)    //=> My name is John. I'm 15
+
+	// Structure in another Structure
+	doubleStruct() //=> {Monkey {Banana 10}}
 }
 
 func intro(name string, age int) {
 	fmt.Printf("My name is %s. I'm %d\n", name, age)
+}
+
+// Structure in another Structure
+type Feed struct {
+	Name   string
+	Amount uint
+}
+
+type Animal struct {
+	Name string
+	Feed Feed // Using Feed structure as a field
+}
+
+func doubleStruct() {
+	a := Animal{
+		Name: "Monkey",
+		Feed: Feed{
+			Name:   "Banana",
+			Amount: 10,
+		},
+	}
+	// a.Name      //=> Monkey
+	// a.Feed.Name //=> Banana
+	fmt.Println(a)
 }

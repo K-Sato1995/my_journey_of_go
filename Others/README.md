@@ -18,7 +18,7 @@ func main() {
 
 # Type Definitions
 
-In Go, we can define new types by using the following form. In the syntax, type is a keyword.
+In Go, we can define new types by using the following form.
 
 ```go
 // Define a solo new type.
@@ -29,6 +29,23 @@ type (
 	NewTypeName1 SourceType1
 	NewTypeName2 SourceType2
 )
+```
+
+You can also define complicated types using `type`.
+
+```go
+
+type (
+	intPair [2]int
+	areaMap map[string][2]float64
+)
+
+func main() {
+	pair := intPair{1, 2}
+	area := areaMap{"Boston": {45.3, 67.5}}
+
+	fmt.Println(pair, area)
+}
 ```
 
 # References
