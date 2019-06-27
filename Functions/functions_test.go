@@ -19,3 +19,13 @@ func TestMultiple(t *testing.T) {
 		t.Errorf("%v is not %v\n", expect, actual)
 	}
 }
+
+func TestReverse(t *testing.T) {
+	expect := "WorldHello"
+	ans1, ans2 := reverse("Hello", "World")
+	actual := ans1 + ans2
+
+	if expect != actual {
+		t.Errorf("%v is not %v\n", expect, actual)
+	}
+}
