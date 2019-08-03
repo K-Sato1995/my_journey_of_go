@@ -105,6 +105,17 @@ But if you want to export a function, you have to write it starting with a capit
 TestFunction () {}
 ```
 
+# String interpolation
+
+The Go `Sprintf` method from `fmt` package serves just this:
+
+```go
+import ( "fmt" )
+date := fmt.Sprintf("%d-%d-%d", year, month, day)
+time := fmt.Sprintf("%d:%d:%d", hour, minute, second)
+datetime := fmt.Sprintf("%s,%s", date, time)
+```
+
 # References
 
 - [Package fmt](https://golang.org/pkg/fmt/)
