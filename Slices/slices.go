@@ -55,4 +55,11 @@ func main() {
 	if nil_slice == nil {
 		fmt.Println("nil") //=> nil
 	}
+
+	// Copy
+	s1 := []int{1, 2, 3, 4, 5}
+	s2 := []int{10, 11}
+
+	c := copy(s1, s2)
+	fmt.Println(s1, s2, c) //=> [10 11 3 4 5] [10 11] 2
 }
