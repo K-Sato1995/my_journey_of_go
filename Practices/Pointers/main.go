@@ -20,10 +20,10 @@ func main() {
 
 	for i, v := range p2 {
 		fmt.Println(i, v)
-		/*
-			0 1
-			1 2
-			2 3
+		/* 出力結果
+		0 1
+		1 2
+		2 3
 		*/
 	}
 }
