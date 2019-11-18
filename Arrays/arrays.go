@@ -12,7 +12,7 @@ func main() {
 	fmt.Printf("%v\n", langs) //=> [Go Ruby]
 
 	// (2) var name[num]Type = [num]Type { ele1, ele2, elen.... }
-	var langs2 [2]string = [2]string{"Go", "Ruby"}
+	var langs2 = [2]string{"Go", "Ruby"}
 	fmt.Printf("%v\n", langs2) //=> [Go Ruby]
 
 	// (3) name := [...] Type { ele1, ele2, elen... }

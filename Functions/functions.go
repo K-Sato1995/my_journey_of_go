@@ -18,13 +18,13 @@ func reverse(str1, str2 string) (string, string) {
 }
 
 func main() {
-	// Calling a function1
+	// Calling function1
 	fmt.Println(greetings("John")) //=> Hello John
 
-	// Calling a function2
+	// Calling function2
 	fmt.Println(multiple(2, 3)) //=> 6
 
-	// Calling a function3
+	// Calling function3
 	a, b := reverse("Hello", "World")
 	fmt.Println(a, b)                      //=> World Hello
 	fmt.Println(reverse("Hello", "World")) //=> World Hello

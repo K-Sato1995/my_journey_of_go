@@ -9,7 +9,7 @@ func main() {
 	f, err := os.Open("/test.txt")
 
 	if err != nil {
-		fmt.Println("The error is gonna occur!")
+		fmt.Println("An error has occured!")
 		fmt.Println(err)
 		return
 	}
