@@ -140,5 +140,14 @@ func main() {
 You can use a structure as a field of another structure.
 
 ```go
+// Structure in another Structure
+type Feed struct {
+	Name   string
+	Amount uint
+}
 
+type Animal struct {
+	Name string
+	Feed Feed // Using Feed structure as a field
+}
 ```
